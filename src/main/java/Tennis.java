@@ -3,6 +3,9 @@ public class Tennis {
     private int player1Score = 0;
 
     public String getScore() {
+        if(player1Score == 3) {
+            return "Forty Love";
+        }
         if(player1Score == 2) {
             return "Thirty Love";
         }

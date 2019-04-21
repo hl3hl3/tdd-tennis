@@ -22,4 +22,12 @@ public class TennisTest {
         tennis.player1AddScore();
         Assert.assertEquals(tennis.getScore(),"Thirty Love");
     }
+
+    @Test
+    public void fortyLove() {
+        tennis.player1AddScore();
+        tennis.player1AddScore();
+        tennis.player1AddScore();
+        Assert.assertEquals(tennis.getScore(),"Forty Love");
+    }
 }
