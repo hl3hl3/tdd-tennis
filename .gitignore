@@ -4,3 +4,5 @@
 .settings/org.eclipse.m2e.core.prefs
 target/classes/Tennins.class
 target/test-classes/TennisTest.class
+.idea
+target/*
