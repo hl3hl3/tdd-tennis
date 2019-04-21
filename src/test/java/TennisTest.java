@@ -3,16 +3,23 @@ import org.junit.Test;
 
 public class TennisTest {
 
+    private Tennis tennis = new Tennis();
+
     @Test
     public void loveAll() {
-        Tennis tennis = new Tennis();
         Assert.assertEquals(tennis.getScore(), "Love All");
     }
 
     @Test
     public void fifteenLove() {
-        Tennis tennis = new Tennis();
         tennis.player1AddScore();
         Assert.assertEquals(tennis.getScore(), "Fifteen Love");
+    }
+
+    @Test
+    public void thirtyLove() {
+        tennis.player1AddScore();
+        tennis.player1AddScore();
+        Assert.assertEquals(tennis.getScore(),"Thirty Love");
     }
 }
