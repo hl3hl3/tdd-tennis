@@ -5,35 +5,48 @@ public class TennisTest {
 
     private Tennis tennis = new Tennis();
 
+    private void scoreShouldBe(String expected) {
+        Assert.assertEquals(tennis.getScore(), expected);
+    }
+
+    private void player1AddScoreTimes(int times) {
+        for(int i=0; i<times; i++) {
+            tennis.player1AddScore();
+        }
+    }
+
+    private void player2AddScoreTimes(int times) {
+        for(int i=0; i<times; i++) {
+            tennis.player2AddScore();
+        }
+    }
+
     @Test
     public void loveAll() {
-        Assert.assertEquals(tennis.getScore(), "Love All");
+        scoreShouldBe("Love All");
     }
 
     @Test
     public void fifteenLove() {
-        tennis.player1AddScore();
-        Assert.assertEquals(tennis.getScore(), "Fifteen Love");
+        player1AddScoreTimes(1);
+        scoreShouldBe("Fifteen Love");
     }
 
     @Test
     public void thirtyLove() {
-        tennis.player1AddScore();
-        tennis.player1AddScore();
-        Assert.assertEquals(tennis.getScore(),"Thirty Love");
+        player1AddScoreTimes(2);
+        scoreShouldBe("Thirty Love");
     }
 
     @Test
     public void fortyLove() {
-        tennis.player1AddScore();
-        tennis.player1AddScore();
-        tennis.player1AddScore();
-        Assert.assertEquals(tennis.getScore(),"Forty Love");
+        player1AddScoreTimes(3);
+        scoreShouldBe("Forty Love");
     }
 
     @Test
     public void loveFifteen() {
-        tennis.player2AddScore();
-        Assert.assertEquals(tennis.getScore(),"Love Fifteen");
+        player2AddScoreTimes(1);
+        scoreShouldBe("Love Fifteen");
     }
 }
