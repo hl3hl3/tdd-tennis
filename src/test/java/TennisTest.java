@@ -49,4 +49,10 @@ public class TennisTest {
         player2AddScoreTimes(1);
         scoreShouldBe("Love Fifteen");
     }
+
+    @Test
+    public void loveThirty() {
+        player2AddScoreTimes(2);
+        scoreShouldBe("Love Thirty");
+    }
 }
