@@ -55,4 +55,11 @@ public class TennisTest {
         player2AddScoreTimes(2);
         scoreShouldBe("Love Thirty");
     }
+
+    @Test
+    public void fifteenAll() {
+        player1AddScoreTimes(1);
+        player2AddScoreTimes(1);
+        scoreShouldBe("Fifteen All");
+    }
 }

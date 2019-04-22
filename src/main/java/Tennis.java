@@ -16,6 +16,9 @@ public class Tennis {
     }
 
     public String getScore() {
+        if(player1Score == 1 && player2Score == 1) {
+            return "Fifteen All";
+        }
         if(player1Score == 0 && player2Score == 0) {
             return "Love All";
         }
